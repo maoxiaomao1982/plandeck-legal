@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PlanDeck 技术支持 —— 计划清单排期台的使用帮助、常见问题与联系方式。日程、排期、进度和开销，收进一张清单。">
+<title>PlanDeck 技术支持 · Igva Design</title>
+<style>
+  :root{
+    --bg:#F7F3EC;
+    --paper:#FFFFFF;
+    --ink:#2C2419;
+    --muted:#8A7C68;
+    --line:#E8E0D2;
+    --gold:#C9A86C;
+    --gold-2:#DFC79A;
+    --gold-soft:#F5EEDF;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(44,36,25,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Segoe UI",Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .topbar{max-width:860px;margin:0 auto;padding:22px 24px 0;display:flex;align-items:center;gap:10px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.4px}
+  .logo .mark{
+    width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#fff;font-size:15px;font-weight:800;
+    box-shadow:var(--shadow);
+  }
+  .logo small{color:var(--muted);font-weight:600;font-size:13px}
+
+  .hero{
+    max-width:860px;margin:18px auto 0;padding:46px 34px 40px;border-radius:26px;
+    background:radial-gradient(120% 120% at 0% 0%,#FBF7EF 0%,#F7F3EC 55%);
+    border:1px solid var(--line);box-shadow:var(--shadow);text-align:center;
+  }
+  .pill{display:inline-block;background:#fff;color:#9A7B3F;border:1px solid #E5D6B4;
+    font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+  .hero h1{margin:0;font-size:34px;letter-spacing:.5px;font-family:"Didot","Playfair Display","Baskerville",Georgia,serif;font-weight:600}
+  .hero .lead{color:var(--muted);margin-top:12px;font-size:15px}
+
+  .wrap{max-width:760px;margin:0 auto;padding:8px 22px 60px}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;margin:22px 0;box-shadow:0 6px 18px rgba(44,36,25,.04);
+  }
+  .card h2{display:flex;align-items:center;gap:10px;font-size:19px;margin:0 0 12px}
+  .card h2 .dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--gold-2),var(--gold))}
+  p{margin:10px 0;font-size:15px;color:#4E4436}
+  ul{margin:10px 0;padding-left:22px;font-size:15px;color:#4E4436}
+  li{margin:7px 0}
+  a{color:#9A7B3F;text-decoration:none;font-weight:600}
+  a:hover{text-decoration:underline}
+
+  .flow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+  .flow span{background:var(--gold-soft);border:1px solid #E5D6B4;color:#8A6A2E;
+    font-size:13.5px;font-weight:700;padding:5px 13px;border-radius:999px}
+  .flow i{color:var(--gold-2);font-style:normal;font-weight:800;align-self:center}
+
+  .mailbox{
+    display:flex;align-items:center;gap:14px;background:var(--gold-soft);
+    border:1px solid #E5D6B4;border-radius:16px;padding:18px 20px;margin-top:6px;
+  }
+  .mailbox .icon{font-size:26px;line-height:1}
+  .mailbox .txt{font-size:14.5px;color:#6E6250}
+  .mailbox .addr{font-size:17px;font-weight:800;letter-spacing:.2px}
+
+  details{border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:12px 0;background:#FFFDF8}
+  details[open]{background:#fff;box-shadow:0 4px 14px rgba(44,36,25,.05)}
+  summary{cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--gold);font-size:20px;font-weight:700;line-height:1}
+  details[open] summary::after{content:"–"}
+  details .body{margin-top:10px;font-size:14.8px;color:#584E3F}
+
+  .hl{background:var(--gold-soft);border-left:3px solid var(--gold);border-radius:8px;
+      padding:12px 16px;color:var(--ink);font-size:14.5px}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:700;font-size:13.5px}
+
+  footer{
+    max-width:760px;margin:34px auto 0;padding:22px;border-top:1px solid var(--line);
+    color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  }
+  .sig{font-weight:700;color:var(--ink);letter-spacing:.5px}
+  .sig span{color:var(--gold)}
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="logo"><span class="mark">I</span> Igva Design <small>· studio</small></div>
+  </div>
+
+  <section class="hero">
+    <span class="pill">技术支持 / Support</span>
+    <h1>PlanDeck</h1>
+    <p class="lead">计划清单排期台：日程 · 排期 · 进度 · 合计 · 开销，一张清单装下<br>遇到问题？我们很乐意帮你 🐾<br>无论是 Bug、建议还是想要的新功能，欢迎随时来信</p>
+  </section>
+
+  <div class="wrap">
+
+    <div class="card">
+      <h2><span class="dot"></span>联系我们</h2>
+      <div class="mailbox">
+        <span class="icon">✉️</span>
+        <span class="txt">
+          支持邮箱<br>
+          <a class="addr" href="mailto:maoxiaomao198206@163.com">maoxiaomao198206@163.com</a>
+        </span>
+      </div>
+      <p style="margin-top:14px">我们通常会在 <b>1–3 个工作日</b>内回复。来信时若附上<b>设备型号、系统版本、操作步骤</b>，能帮我们更快定位问题。</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>PlanDeck 能做什么</h2>
+      <p>它把「我这个月要做什么、做到哪一步、一共多少钱」收进同一张清单：</p>
+      <div class="flow">
+        <span>月历排期</span><i>›</i><span>清单进度</span><i>›</i><span>合计开销</span>
+      </div>
+      <ul>
+        <li><b>月历视图</b>：每天有哪些安排，条状标在格子里，双击日程条直达那一条。</li>
+        <li><b>日程表</b>：名称 / 时间 / 数值 / 文件路径 / 进度横向排开，进度与开销一起看。</li>
+        <li><b>卡片视图</b>：手机上默认竖排卡片，左右滑动逐条过，封面一眼认出这一条。</li>
+        <li><b>概览统计</b>：本月多少条、合计多少、几条已完成，一眼看完。</li>
+        <li><b>自定义列</b>：文本框 / 数值 / 时间 / 文件存放 / 多选框五种模块自由拼，列能改名、排序、增删，做成模板后可复用，并随备份一起导出。</li>
+        <li><b>进度一眼看得懂</b>：勾掉最后一个多选项，整行变浅、时间锁定，做完的不会被误改。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>支持的设备与费用</h2>
+      <table>
+        <tr><th>项目</th><th>说明</th></tr>
+        <tr><td>Mac</td><td>macOS 版，可驻留菜单栏、登录后自动打开</td></tr>
+        <tr><td>iPhone / iPad</td><td>iOS 版，iPhone 与 iPad 通用</td></tr>
+        <tr><td>免费功能</td><td>月历、清单、卡片视图、模板制作、导出备份、全部外观主题</td></tr>
+        <tr><td>Pro 权益</td><td>一次性买断（非订阅）：解锁导入备份、日历同步、iCloud 同步</td></tr>
+        <tr><td>跨端通用</td><td>任意一端解锁，同一 Apple ID 下 Mac / iPhone / iPad 通用</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>常见问题</h2>
+
+      <details>
+        <summary>我的数据存在哪里？必须联网才能用吗？</summary>
+        <div class="body">默认状态<b>只保存在你的设备本地</b>，不联网也能完整使用，不需要注册账号。我们没有存放你数据的服务器，因此也读不到你的日程内容。只有当你主动开启 iCloud 同步后，数据才会存进<b>你自己的 iCloud 私有空间</b>，用于多设备保持一致。</div>
+      </details>
+
+      <details>
+        <summary>多台设备之间怎么同步？</summary>
+        <div class="body">打开设置里的 <b>iCloud 同步</b>（Pro 权益）即可。开启后两端各自修改会自动合并，无需手动倒腾；断网照常使用，联网后自动追平。若对端刚刚修改，本机通常会在几秒内收到更新。同步走的是你自己的 iCloud 账号，与我们的服务器无关。</div>
+      </details>
+
+      <details>
+        <summary>和系统日历怎么配合？</summary>
+        <div class="body">开启<b>日历同步</b>（Pro 权益）后，带日期的日程会写入系统日历，你在 iPhone / iPad / Mac 的日历里都能看到；在日历里改了时间，回到 App 会自动校准。同步使用一个<b>独立的「PlanList」日历</b>，不与你的私人日程混淆，可随时整体关闭。</div>
+      </details>
+
+      <details>
+        <summary>免费版能用哪些功能？Pro 解锁了什么？</summary>
+        <div class="body">月历、清单、卡片视图、模板制作、<b>导出备份</b>和全部外观主题都是免费的。<b>Pro 是一次性买断</b>（不是订阅），解锁<b>导入备份</b>、<b>日历同步</b>、<b>iCloud 同步</b>。注意导出备份免费、导入备份是 Pro —— 这样你可以随时把数据带走，不受限制。</div>
+      </details>
+
+      <details>
+        <summary>怎么备份？换设备会丢数据吗？</summary>
+        <div class="body">用 App 内的<b>导出备份</b>功能把数据保存成文件，位置由你在系统文件选择器中自行决定。数据存在本机，卸载 App 会连同数据一并清除，所以换设备或重装前<b>请先导出备份</b>。如果你开了 iCloud 同步，同一 Apple ID 下也可通过 iCloud 恢复。</div>
+      </details>
+
+      <details>
+        <summary>能打开文件或文件夹吗？</summary>
+        <div class="body">可以。日程里的「文件存放」列可以关联文件或文件夹路径并直接打开。在 <b>Mac 上</b>直接打开对应位置；在 <b>iPhone / iPad 上</b>，首次需要你通过系统选择器授权一次，之后我们会在本机记住这个位置，点击即可预览文件或浏览文件夹。出于 iOS 安全机制，App 无法访问你从未授权过的路径。</div>
+      </details>
+
+      <details>
+        <summary>外观可以改吗？</summary>
+        <div class="body">三套主题随手切换：<b>奶油风</b>（米白纸感）、<b>Liquid Class</b>（光学玻璃，悬浮于界面）、<b>Embossment</b>（同色凹凸）。背景浓度可调，深浅自己定，桌面与手机都顺手。</div>
+      </details>
+
+      <details>
+        <summary>App 闪退或卡住怎么办？</summary>
+        <div class="body">请把<b>设备型号、系统版本、操作步骤</b>发邮件给我们，我们会尽快排查修复。如果只是偶发，先完全关闭 App 再重新打开通常就能恢复；你的数据存在本地，重开后不会丢失。</div>
+      </details>
+
+      <details>
+        <summary>怎么清空所有数据重新开始？</summary>
+        <div class="body">在 App 内的数据管理入口可以清空全部日程数据。清空不可撤销，执行前建议先导出备份。卸载再重装也会达到同样效果。</div>
+      </details>
+
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>反馈建议</h2>
+      <div class="hl">你的每条反馈都会进入我们的迭代清单。想让 PlanDeck 更好用，随时写信给我们 🙌</div>
+      <p style="margin-top:14px">无论是想要的列类型、更顺手的操作，还是让你别扭的某个细节，都欢迎直说。小团队的排期由这些真实反馈决定。</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>© 2026 PlanDeck · Igva Design</span>
+    <span class="sig">Igva Design <span>✦</span> 用心做小工具</span>
+  </footer>
+
+</body>
+</html>
